@@ -1,4 +1,5 @@
 import React from 'react';
+import Navigation from './components/navigation'
 
 function App() {
   return (
@@ -7,6 +8,7 @@ function App() {
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
+        <Navigation/>
       </header>
     </div>
   );

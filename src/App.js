@@ -1,17 +1,25 @@
-import React from 'react';
-import Navigation from './components/navigation'
+import React, { Component } from 'react';
+import Navbar from './components/Navbar';
+import { BrowserRouter, Route } from 'react-router-dom';
+import Home from './components/Home';
+import About from './components/About';
+import Products from './components/Products';
+import Contact from './components/Contact';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <Navigation/>
-      </header>
-    </div>
-  );
+class App extends Component {
+  render() {
+    return (
+      <BrowserRouter>
+        <div className="App">
+          <Navbar/>
+          <Route exact path='/' component={Home}/>
+          <Route path='/about' component={About}/>
+          <Route path='/products' component={Products}/>
+          <Route path='/contact' component={Contact}/>
+        </div>
+      </BrowserRouter>
+    );
+  }
 }
 
 export default App;

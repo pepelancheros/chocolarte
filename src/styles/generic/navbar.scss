@@ -1,0 +1,13 @@
+.navbar.navbar--custom {
+    position: fixed;
+    width: 100%;
+    background-image: url("../../imgs/fade_nav.png");
+    background-size: contain;
+    .nav-item {
+        text-transform: uppercase;
+        padding: 0 30px;
+        &:last-child {
+            padding-right: 0;
+        }
+    }
+}

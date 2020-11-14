@@ -1,1 +1,7 @@
-@import './generic/text.scss'
+@import './utils/variables.scss';
+@import './utils/mix/mixins.scss';
+
+@import './generic/text.scss';
+@import './generic/navbar.scss';
+
+@import './layout/home.scss';

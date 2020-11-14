@@ -1,9 +1,10 @@
 import React from 'react'
+import imgBanner from '../imgs/img_banner.JPG'
 
 const Home = () => {
     return (
-        <div className="container">
-            <h4>Home</h4>
+        <div className="home container-fluid">
+            <img className="banner" src={ imgBanner } alt="ingredientes de chocolates"/>
         </div>
     )
 }

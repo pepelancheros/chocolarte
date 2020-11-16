@@ -46,16 +46,29 @@
             transform: translateY(-50%);
         }
     }
-    .home-products {
-        margin-bottom: 60px;
-        .horizontal-line {
-            width: 100%;
-            max-width: 230px;
-            background: black;
-            height: 2px;
+    .products {
+        &__title {
+            margin-bottom: 60px;
+            .horizontal-line {
+                width: 100%;
+                max-width: 230px;
+                background: black;
+                height: 2px;
+            }
+            .text-medium {
+                margin: 0px 40px;
+            }
         }
-        .text-medium {
-            margin: 0px 40px;
+        &__chocolates{
+            position: relative;
+            &__background {
+                position: absolute;
+                width: 100%;
+                z-index: -1;
+            }
+            &__main {
+                width: 100%;
+            }
         }
     }
 }

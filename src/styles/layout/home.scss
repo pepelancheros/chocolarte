@@ -6,4 +6,56 @@
     .banner {
         width: 100%;
     }
+    .banner--fade {
+        width: 100%;
+        margin-top: -226px;
+        z-index: 100;
+        position: relative;
+    }
+    .chocolate-melt {
+        position: relative;
+        &__background {
+            width: 100%;
+            margin-top: -230px;
+            z-index: -1;
+            position: absolute;
+        }
+        &__info {
+            padding: 230px 0;
+        }
+        &__image {
+            width: 100%;
+        }
+    }
+
+    .chocolate-customization {
+        position: relative;
+        margin-bottom: 60px;
+        &__image {
+            width: 100%;
+            z-index: -2;
+            position: relative;
+        }
+        &__info {
+            position: absolute;
+            background-color: $c-custom-1;
+            padding: 100px 20px 100px 80px;
+            border-top-right-radius: 30px;
+            border-bottom-right-radius: 30px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+    .home-products {
+        margin-bottom: 60px;
+        .horizontal-line {
+            width: 100%;
+            max-width: 230px;
+            background: black;
+            height: 2px;
+        }
+        .text-medium {
+            margin: 0px 40px;
+        }
+    }
 }

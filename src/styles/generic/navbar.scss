@@ -3,6 +3,7 @@
     width: 100%;
     background-image: url("../../imgs/fade_nav.png");
     background-size: contain;
+    z-index: 1000;
     .nav-item {
         text-transform: uppercase;
         padding: 0 30px;

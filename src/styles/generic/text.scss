@@ -15,3 +15,7 @@ html body {
 .text-small {
     @include font-rem($fz-small);
 }
+
+.light-text {
+    color: $c-background;
+}

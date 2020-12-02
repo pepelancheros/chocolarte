@@ -61,6 +61,13 @@
         }
         &__chocolates{
             position: relative;
+            &__text {
+                text-align: center;
+                position: absolute;
+                width: 100%;
+                top: 120px;
+                color: $c-background;
+            }
             &__background {
                 position: absolute;
                 width: 100%;
@@ -69,6 +76,52 @@
             &__main {
                 width: 100%;
             }
+        }
+        &__empaques {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            &__img {
+                max-width: 950px;
+            }
+        }
+        &__barras {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            &__img {
+                max-width: 800px;
+            }
+            &__text {
+                margin-right: 70px;
+            }
+        }
+        &__special {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            &__img {
+                max-width: 900px;
+            }
+            &__text {
+                margin-left: 70px;
+            }
+        }
+    }
+    &__contact {
+        position: relative;
+        &__text {
+            position: absolute;
+            top: 470px;
+            left: 70px;
+            color: $c-background;
+            line-height: 1.4;
+            a {
+                color: $c-background;
+            }
+        }
+        &__background {
+            width: 100%;
         }
     }
 }

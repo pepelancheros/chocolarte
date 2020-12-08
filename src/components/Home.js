@@ -5,15 +5,16 @@ import chocolateMelt from '../imgs/chocolate_melt.svg'
 import chocolatePlate from '../imgs/chocolateplate.png'
 import chocolateInfo from '../imgs/chocolate-info.JPG'
 import chocolatesForestMain from '../imgs/chocolates_forest_main.png'
-import chocolatesForestBackground from '../imgs/chocolates_forest_background.png'
 import blackBoxGif from '../imgs/blackbox.gif'
 import chocolateBars from '../imgs/chocolatebars.png'
 import chocolateSpecial from '../imgs/witchheel.png'
 import contactBackground from '../imgs/contact-background.JPG'
+import chocolarteTitle from '../imgs/chocolarte_title.svg'
 
 const Home = () => {
     return (
         <div className="home container-fluid">
+            <img className="chocolarte-title" src={ chocolarteTitle } alt="chocolarte title"/>
             <img className="banner" src={ imgBanner } alt="chocolate ingredients"/>
             <img className="banner--fade" src={ imgBannerFade } alt="image decoration"/>
             <div className="chocolate-melt">
@@ -43,7 +44,6 @@ const Home = () => {
                 </div>
                 <div className="products__chocolates">
                     <h4 className="text-large products__chocolates__text">Chocolates</h4>
-                    <img className="products__chocolates__background" src={ chocolatesForestBackground } alt="multiple chocolates picture background"/>
                     <img className="products__chocolates__main" src={ chocolatesForestMain } alt="multiple chocolates picture"/>
                 </div>
                 <div className="products__empaques">

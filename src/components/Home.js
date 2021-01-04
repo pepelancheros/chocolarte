@@ -8,20 +8,100 @@ import blackBoxGif from '../imgs/blackbox.gif'
 import chocolateBars from '../imgs/chocolatebars.png'
 import chocolateSpecial from '../imgs/witchheel.png'
 import contactBackground from '../imgs/contact-background.JPG'
-import chocolarteTitle from '../imgs/chocolarte_title.svg'
+import ChocolarteTitle from './ChocolarteTitle.js'
 import _ from 'lodash';
+import gsap from 'gsap'
+import scrollTrigger from 'gsap/ScrollTrigger'
 
 function Home() {
     const [mustMelt, setMustMelt] = useState(false);
     const myRef = useRef(null);
     const myAnimation = useRef(null);
 
+    gsap.registerPlugin(scrollTrigger);
+    gsap.defaults({ease: "none", duration: 2});
+
+    gsap.to(".products__chocolates", {
+        scrollTrigger: { 
+            trigger: ".products__chocolates",
+            start: "top top",
+            pin: true,
+            pinSpacing: false
+        }
+    });
+    gsap.to(".products__empaques", {
+        scrollTrigger: { 
+            trigger: ".products__empaques",
+            start: "top top",
+            pin: true,
+        }
+    });
+     
+    gsap.to(".products__empaques__text", {
+        scrollTrigger: { 
+            trigger: ".products__empaques__text",
+            start: "center center",
+            end: "top top",
+            scrub: true,
+            toggleActions: "restart none none none",
+        },
+        y: -300
+    });
+
+    gsap.to(".products__barras__text", {
+        scrollTrigger: { 
+            trigger: ".products__barras__text",
+            pin: true,
+            pinSpacing: false,
+            start: "top 70px",
+            end: "+=500",
+            scrub: true,
+            toggleActions: "restart none none none",
+        },
+    });
+
+    gsap.to(".products__special__text", {
+        scrollTrigger: { 
+            trigger: ".products__special__text",
+            pin: true,
+            pinSpacing: false,
+            start: "top 70px",
+            end: "+=700",
+            scrub: true,
+            toggleActions: "restart none none none",
+        },
+    });
+
     useEffect(() => {
-        window.addEventListener('scroll', _.throttle(handleScroll, 800))
+        window.addEventListener('scroll', _.throttle(handleScroll, 800));
+
+        gsap.to(".chocolarte-title__path", {
+            scrollTrigger: { 
+                trigger: ".chocolarte-title__path",
+                start: "350px 30%",
+                scrub: 1,
+                toggleActions: "restart none none none",
+            },
+            fill: "#E7E7E7"
+        });
+
+        gsap.to(".chocolarte-title", {
+            scrollTrigger: { 
+                trigger: ".chocolarte-title",
+                start: "top 30%",
+                scrub: 1,
+                markers: 1,
+                toggleActions: "restart none none none",
+            },
+            top: "2px",
+            maxWidth: "200px",
+        });
     });
     useEffect(() => {
         if (mustMelt === true) {
             myAnimation.current.beginElement();
+        } else {
+            window.scrollTo(0, 0);
         }
     }, [mustMelt]);
     function handleScroll() {
@@ -34,12 +114,15 @@ function Home() {
 
     return(
         <div className="home container-fluid">
-                <img className="chocolarte-title" src={ chocolarteTitle } alt="chocolarte title"/>
+                {/* <img className="chocolarte-title" src={ chocolarteTitle } alt="chocolarte title"/> */}
+                <div className="chocolarte-title">
+                    <ChocolarteTitle/>
+                </div>
                 <img className="banner" src={ imgBanner } alt="chocolate ingredients"/>
                 <img className="banner--fade" src={ imgBannerFade } alt="decoration"/>
                 <div ref={myRef} className="chocolate-melt">
                     <svg className="chocolate-melt__background" viewBox="0 0 1440 1493" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
-                        <path id="holi" d="M0 -0.000244141H1440V161C1440 161 1381.5 416 1381.5 161C1381.5 29.0662 1235.5 161 1188 161C1140.5 161 1111 161 1068 161C1025 161 999.5 170.093 984 161C968.5 151.906 948 161 910 161C872 161 856 150.5 841 161C826 171.5 806.205 161 776 161C745.795 161 744 169.963 733 161C722 152.037 698.5 167 686 161C673.5 155 650 161 636.5 161C582.5 161 607.5 161 560 161C512.5 161 551 71.488 444 161C337 250.511 336 179 242 161C148 143 102 150 0 161V-0.000244141Z" fill="url(#paint0_linear)">
+                        <path id="melting-chocolate" d="M0 -0.000244141H1440V161C1440 161 1381.5 416 1381.5 161C1381.5 29.0662 1235.5 161 1188 161C1140.5 161 1111 161 1068 161C1025 161 999.5 170.093 984 161C968.5 151.906 948 161 910 161C872 161 856 150.5 841 161C826 171.5 806.205 161 776 161C745.795 161 744 169.963 733 161C722 152.037 698.5 167 686 161C673.5 155 650 161 636.5 161C582.5 161 607.5 161 560 161C512.5 161 551 71.488 444 161C337 250.511 336 179 242 161C148 143 102 150 0 161V-0.000244141Z" fill="url(#paint0_linear)">
                             <animate ref={myAnimation} begin="indefinite" dur="4s" attributeName="d" fill="freeze" to="M0 0H1440V1492.5C1440 1492.5 1380.5 1490.5 1380.5 1235.5C1380.5 1103.57 1316.03 1046.5 1268.53 1046.5C1221.03 1046.5 1182.03 1092 1139.03 1092C1096.03 1092 1069.53 1064.59 1054.03 1055.5C1038.53 1046.41 1004.03 1018 966.031 1018C928.031 1018 898.031 1037 883.031 1047.5C868.031 1058 852.236 1069 822.031 1069C791.826 1069 777.531 1056.46 766.531 1047.5C755.531 1038.54 744.531 1030 732.031 1024C719.531 1018 706.032 1016 692.531 1016C638.531 1016 669.031 1127 621.531 1127C574.031 1127 615.031 963.988 508.031 1053.5C401.031 1143.01 378.032 1043 284.031 1025C190.031 1007 102 1168 0 1179V0Z"></animate>
                         </path>
                         <defs>
@@ -84,12 +167,16 @@ function Home() {
                         <img className="products__empaques__img" src={ blackBoxGif } alt="gif chocolate box opening"/>
                     </div>
                     <div className="products__barras"> 
-                        <img className="products__barras__img" src={ chocolateBars } alt="chocolate bars"/>
+                        <div className="products__barras__img-container">
+                            <img className="products__barras__img" src={ chocolateBars } alt="chocolate bars"/>
+                        </div>
                         <h4 className="text-large products__barras__text">Barras</h4>
                     </div>
                     <div className="products__special">
-                        <h4 className="text-large products__special__text">Ocasiones Especiales</h4>
-                        <img className="products__special__img" src={ chocolateSpecial } alt="box of chocolates for halloween with the form of a witch heel"/>
+                        <h4 className="text-large products__special__text">Ocasiones <br/> Especiales</h4>
+                        <div className="products__special__img-container">
+                            <img className="products__special__img" src={ chocolateSpecial } alt="box of chocolates for halloween with the form of a witch heel"/>
+                        </div>
                     </div>
                 </div>
                 <div className="home__contact">

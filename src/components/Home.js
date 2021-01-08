@@ -147,7 +147,7 @@ function Home() {
                 </div>
                 <div className="chocolate-customization">
                     <img className="chocolate-customization__image" src={ chocolateInfo } alt=""/>
-                    <div className="col-6 chocolate-customization__info text-medium">
+                    <div className="col-8 col-lg-6 chocolate-customization__info text-medium">
                         <p className="chocolate-customization__info__text">Personaliza tus chocolates con el porcentaje de cacao, relleno y decoración que más te guste </p>
                     </div>
                 </div>

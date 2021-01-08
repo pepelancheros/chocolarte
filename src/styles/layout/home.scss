@@ -21,7 +21,7 @@
     }
     .banner--fade {
         width: 100%;
-        margin-top: -270px;
+        margin-top: -20%;
         z-index: 10;
         position: relative;
     }
@@ -36,10 +36,13 @@
             position: absolute;
         }
         &__info {
-            padding: 200px 0;
+            height: 100vh;
         }
         &__image {
             width: 100%;
+            transform: translateY(-50%);
+            top: 50%;
+            position: absolute;
         }
     }
 
@@ -189,6 +192,14 @@
         }
         &__background {
             width: 100%;
+        }
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .home {
+        .chocolate-customization__info {
+            padding: 40px 20px 40px 60px;
         }
     }
 }

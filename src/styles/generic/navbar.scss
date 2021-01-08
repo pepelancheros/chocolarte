@@ -2,14 +2,65 @@
     position: fixed;
     width: 100%;
     height: 80px;
-    background-image: url("../../imgs/fade_nav.png");
-    background-size: contain;
+    background: rgb(48,32,32);
+    background: linear-gradient(180deg, rgba(48,32,32,1) 0%, rgba(48,32,32,0.8) 65%, rgba(48,32,32,0) 100%);
     z-index: 100;
+    .navbar-toggler {
+        z-index: 1;
+        border: none;
+    }
+    .navbar-collapse {
+        margin: auto; 
+    }
     .nav-item {
         text-transform: uppercase;
-        padding: 0 30px;
+        margin: 0 15px;
         &:last-child {
             padding-right: 0;
+        }
+    }
+}
+
+
+@media (min-width: 576px) {
+    .navbar.navbar--custom {
+        .navbar-collapse {
+            max-width: 540px;
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .navbar.navbar--custom {
+        .navbar-collapse {
+            max-width: 720px;
+        }
+    }
+}
+
+@media (min-width: 992px) {
+    .navbar.navbar--custom {
+        .navbar-collapse {
+            max-width: 960px;
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .navbar.navbar--custom {
+        .navbar-collapse {
+            left: 0px;
+            background: linear-gradient(rgb(48, 32, 32) 0%, rgba(48, 32, 32, 0.8) 65%, rgba(48, 32, 32, 0) 100%);
+            position: absolute;
+            top: 0px;
+            width: 100vw;
+            text-align: end;
+            padding-bottom: 40px;
+            .nav-link {
+                margin-left: 40%;
+                margin-bottom: 0.5rem;
+                margin-top: 0.5rem;
+            }
         }
     }
 }

@@ -3,24 +3,19 @@ import { NavLink } from 'react-router-dom';
 
 const Navbar = () => {
     return (
-        <div className="navbar--custom navbar navbar-expand-lg navbar-dark">
-            <div className="collapse navbar-collapse maintenance__message container justify-content-end">
-                <ul className="navbar-nav">
-                    <li className="nav-item text-small">
-                        <NavLink to="/" className="nav-link">Inicio</NavLink>
-                    </li>
-                    <li className="nav-item text-small">
-                        <NavLink to="/products" className="nav-link">Nuestros Productos</NavLink>
-                    </li>
-                    <li className="nav-item text-small">
-                        <NavLink to="/about" className="nav-link">Sobre Nosotros</NavLink>
-                    </li>
-                    <li className="nav-item text-small">
-                        <NavLink to="/contact" className="nav-link">Contáctanos</NavLink>
-                    </li>
-                </ul>
+        <nav className="navbar navbar--custom navbar-expand-md navbar-dark">
+            <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span className="navbar-toggler-icon"></span>
+            </button>
+            <div className="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+                <div className="navbar-nav">
+                    <NavLink to="/" className="nav-item nav-link text-small">Inicio</NavLink>
+                    <NavLink to="/products" className="nav-item nav-link text-small">Productos</NavLink>
+                    <NavLink to="/about" className="nav-item nav-link text-small">Nosotros</NavLink>
+                    <NavLink to="/contact" className="nav-item nav-link text-small">Contáctanos</NavLink>
+                </div>
             </div>
-        </div>
+        </nav>
     )
 }
 

@@ -203,3 +203,60 @@
         }
     }
 }
+
+@media (max-width: 767px) {
+    .home {
+        .chocolarte-title {
+            top: 130px;
+            left: 20px;
+            max-width: 60vw;
+            position: absolute;
+        }
+        .chocolate-melt {
+            &__image {
+                width: 55%;
+                left: 140px;
+                transform: none;
+                top: -80px;
+                &-container {
+                    padding-bottom: 40%;
+                }
+            }
+            &__info {
+                height: auto;
+            }
+        }
+        .chocolate-customization {
+            &__info {
+                background-color: $c-custom-1;
+                padding-bottom: 50px;
+                border-bottom-right-radius: 0;
+                top: 0;
+                transform: none;
+                display: flex;
+                align-items: center;
+                height: 100%;
+            }
+        }
+    }
+}
+
+@media (max-width: 575px) {
+    .home {
+        .chocolarte-title {
+            top: 100px;
+        }
+        .chocolate-melt {
+            &__image {
+                &-container {
+                    padding-bottom: 25%;
+                }
+            }
+        }
+        .chocolate-customization {
+            &__info {
+                padding-bottom: 30px;
+            }
+        }
+    }
+}

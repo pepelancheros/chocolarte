@@ -10,6 +10,12 @@ html body {
 
 .text-medium {
     @include font-rem($fz-medium);
+    @media (max-width: 767px) {
+        @include font-rem($fz-sm-medium);
+    }
+    @media (max-width: 575px) {
+        @include font-rem($fz-xs-medium);
+    }
 }
 
 .text-small {

@@ -75,26 +75,30 @@ function Home() {
     useEffect(() => {
         window.addEventListener('scroll', _.throttle(handleScroll, 800));
 
-        gsap.to(".chocolarte-title__path", {
-            scrollTrigger: { 
-                trigger: ".chocolarte-title__path",
-                start: "250px 30%",
-                scrub: 1,
-                toggleActions: "restart none none none",
-            },
-            fill: "#E7E7E7"
-        });
-
-        gsap.to(".chocolarte-title", {
-            scrollTrigger: { 
-                trigger: ".chocolarte-title",
-                start: "top 30%",
-                scrub: 1,
-                toggleActions: "restart none none none",
-            },
-            top: "2px",
-            maxWidth: "200px",
-        });
+        scrollTrigger.matchMedia({
+            "(min-width: 768px)": function() {
+                gsap.to(".chocolarte-title__path", {
+                    scrollTrigger: { 
+                        trigger: ".chocolarte-title__path",
+                        start: "250px 30%",
+                        scrub: 1,
+                        toggleActions: "restart none none none",
+                    },
+                    fill: "#E7E7E7"
+                });
+        
+                gsap.to(".chocolarte-title", {
+                    scrollTrigger: { 
+                        trigger: ".chocolarte-title",
+                        start: "top 30%",
+                        scrub: 1,
+                        toggleActions: "restart none none none",
+                    },
+                    top: "2px",
+                    maxWidth: "200px",
+                });
+            }
+        })
     });
     useEffect(() => {
         if (mustMelt === true) {
@@ -135,11 +139,11 @@ function Home() {
     
                     </svg>
                     <div className="container">
-                        <div className="chocolate-melt__info row">    
-                            <div className="col-6">
+                        <div className="chocolate-melt__info row flex-column-reverse flex-md-row">    
+                            <div className=" chocolate-melt__image-container col-12 col-md-6">
                                 <img className="chocolate-melt__image" src={ chocolatePlate } alt="chocolate in plate"/>
                             </div>
-                            <div className="col-6 d-flex align-items-center text-medium light-text">
+                            <div className="col-12 col-md-6 d-flex align-items-center text-medium light-text">
                                 <p>Creamos chocolates y empaques personalizados para cada emoción y cada momento</p>
                             </div>
                         </div>
@@ -147,7 +151,7 @@ function Home() {
                 </div>
                 <div className="chocolate-customization">
                     <img className="chocolate-customization__image" src={ chocolateInfo } alt=""/>
-                    <div className="col-8 col-lg-6 chocolate-customization__info text-medium">
+                    <div className="col-12 col-md-8 col-lg-6 chocolate-customization__info text-medium">
                         <p className="chocolate-customization__info__text">Personaliza tus chocolates con el porcentaje de cacao, relleno y decoración que más te guste </p>
                     </div>
                 </div>

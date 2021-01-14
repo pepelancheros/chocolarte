@@ -30,7 +30,7 @@
     }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 769px) {
     .navbar.navbar--custom {
         .navbar-collapse {
             max-width: 720px;
@@ -46,7 +46,7 @@
     }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
     .navbar.navbar--custom {
         .navbar-collapse {
             left: 0px;
@@ -54,6 +54,7 @@
             position: absolute;
             top: 0px;
             width: 100vw;
+            max-width: none;
             text-align: end;
             padding-bottom: 40px;
             .nav-link {

@@ -76,7 +76,7 @@ function Home() {
         window.addEventListener('scroll', _.throttle(handleScroll, 800));
 
         scrollTrigger.matchMedia({
-            "(min-width: 768px)": function() {
+            "(min-width: 769px)": function() {
                 gsap.to(".chocolarte-title__path", {
                     scrollTrigger: { 
                         trigger: ".chocolarte-title__path",
@@ -158,7 +158,7 @@ function Home() {
                 <div className="products">
                     <div className="d-flex align-items-center justify-content-center products__title">
                         <div className="horizontal-line"/>
-                        <h3 className="text-medium">nuestros productos</h3>
+                        <h3 className="text-medium font-weight-bold">nuestros productos</h3>
                         <div className="horizontal-line"/>
                     </div>
                     <div className="products__chocolates">

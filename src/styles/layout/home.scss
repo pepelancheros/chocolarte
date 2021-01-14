@@ -67,6 +67,7 @@
     .products {
         &__title {
             margin-bottom: 60px;
+            white-space: nowrap;
             .horizontal-line {
                 width: 100%;
                 max-width: 230px;
@@ -109,15 +110,11 @@
             z-index: 13;
             &__img {
                 max-width: 950px;
-                // position: absolute;
-                // z-index: 5;
-                // top: -800px
             }
         }
         &__barras {
             display: flex;
             align-items: center;
-            // justify-content: space-between;
             justify-content: flex-end;
             background-color: $c-custom-5;
             padding: 20px 0;
@@ -136,9 +133,6 @@
                 top: 50%;
                 transform: translateY(-50%);
                 max-width: 800px;
-                // position: absolute;
-                // top: -800px;
-                // z-index: 5;
             }
             &__text {
                 margin-right: 70px;
@@ -146,7 +140,6 @@
         }
         &__special {
             display: flex;
-            // justify-content: flex-end;
             justify-content: flex-start;
             align-items: center;
             background-color: $c-custom-3;
@@ -167,9 +160,7 @@
                 right: 70px;
                 transform: translateY(-50%);
                 max-width: 800px;
-                // position: absolute;
-                // top: -800px;
-                // z-index: 5;
+                z-index: -1;
             }
             &__text {
                 margin-left: 70px;
@@ -184,6 +175,7 @@
             position: absolute;
             top: 470px;
             left: 70px;
+            margin-bottom: 0;
             color: $c-background;
             line-height: 1.4;
             a {
@@ -196,7 +188,17 @@
     }
 }
 
-@media (min-width: 768px) and (max-width: 991px) {
+@media (max-width: 1200px) {
+    .home {
+        &__contact {
+            &__text {
+                top: 29%;
+            }
+        }
+    }
+}
+
+@media (min-width: 769px) and (max-width: 991px) {
     .home {
         .chocolate-customization__info {
             padding: 40px 20px 40px 60px;
@@ -204,7 +206,7 @@
     }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
     .home {
         .chocolarte-title {
             top: 130px;
@@ -227,6 +229,7 @@
             }
         }
         .chocolate-customization {
+            margin-bottom: 8%;
             &__info {
                 background-color: $c-custom-1;
                 padding-bottom: 50px;
@@ -236,6 +239,33 @@
                 display: flex;
                 align-items: center;
                 height: 100%;
+            }
+        }
+        .products {
+            &__title {
+                margin-bottom: 8%;
+                .text-medium   {
+                    margin: 0 5%;
+                }
+            }
+            &__empaques {
+                &__text {
+                    position: absolute;
+                }
+                &__img {
+                    width: 100%;
+                }
+            }
+            &__barras {
+                &__img {
+                    width: 100%;
+                }
+            }
+            &__special {
+                &__img {
+                    width: 100%;
+                    right: unset;
+                }
             }
         }
     }
@@ -256,6 +286,12 @@
         .chocolate-customization {
             &__info {
                 padding-bottom: 30px;
+            }
+        }
+        &__contact {
+            &__text {
+                top: 20%;
+                left: 20px;
             }
         }
     }

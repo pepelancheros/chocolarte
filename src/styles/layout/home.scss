@@ -137,6 +137,12 @@
             &__text {
                 margin-right: 70px;
             }
+            &__o {
+                position: absolute;
+                bottom: 50px;
+                right: 150px;
+                z-index: -1;
+            }
         }
         &__special {
             display: flex;
@@ -165,6 +171,11 @@
             &__text {
                 margin-left: 70px;
                 color: $c-background;
+            }
+            &__o {
+                position: absolute;
+                top: 50px;
+                left: 10px;
             }
         }
     }

@@ -10,8 +10,7 @@ import blackBoxGif from '../imgs/blackbox.gif'
 import chocolateBars from '../imgs/chocolatebars.png'
 import chocolateSpecial from '../imgs/witchheel.png'
 import contactBackground from '../imgs/contact-background.JPG'
-import oBarras from '../imgs/obarras.png'
-import oSpecial from '../imgs/ospecial.png'
+import OBackground from './OBackground.js'
 import ChocolarteTitle from './ChocolarteTitle.js'
 import _ from 'lodash';
 import gsap from 'gsap'
@@ -33,23 +32,29 @@ function Home() {
             pinSpacing: false
         }
     });
-    gsap.to(".products__empaques", {
-        scrollTrigger: { 
-            trigger: ".products__empaques",
-            start: "top top",
-            pin: true,
-        }
-    });
      
     gsap.to(".products__empaques__text", {
         scrollTrigger: { 
             trigger: ".products__empaques__text",
-            start: "center center",
-            end: "top top",
+            pin: true,
+            pinSpacing: false,
+            start: "top 200px",
+            end: "+=300",
             scrub: true,
             toggleActions: "restart none none none",
         },
-        y: -300
+    });
+
+    gsap.to(".products__empaques__img", {
+        scrollTrigger: { 
+            trigger: ".products__empaques__img",
+            pin: true,
+            pinSpacing: false,
+            start: "center 30%",
+            end: "+=700",
+            scrub: true,
+            toggleActions: "restart none none none",
+        },
     });
 
     gsap.to(".products__barras__text", {
@@ -58,7 +63,7 @@ function Home() {
             pin: true,
             pinSpacing: false,
             start: "top 70px",
-            end: "+=500",
+            end: "+=350",
             scrub: true,
             toggleActions: "restart none none none",
         },
@@ -70,7 +75,7 @@ function Home() {
             pin: true,
             pinSpacing: false,
             start: "top 70px",
-            end: "+=700",
+            end: "+=250",
             scrub: true,
             toggleActions: "restart none none none",
         },
@@ -175,6 +180,7 @@ function Home() {
                         <img className="products__chocolates__main" src={ chocolatesForestMain } alt="multiple chocolates"/>
                     </div>
                     <div className="products__empaques">
+                        <OBackground/>
                         <h4 className="text-large products__empaques__text">Empaques</h4>
                         <img className="products__empaques__img" src={ blackBoxGif } alt="gif chocolate box opening"/>
                     </div>
@@ -183,10 +189,10 @@ function Home() {
                             <img className="products__barras__img" src={ chocolateBars } alt="chocolate bars"/>
                         </div>
                         <h4 className="text-large products__barras__text">Barras</h4>
-                        <img className="products__barras__o" src={ oBarras } alt="logo background"/>
+                        <OBackground/>
                     </div>
                     <div className="products__special">
-                        <img className="products__special__o" src={ oSpecial } alt="logo background"/>
+                        <OBackground/>
                         <h4 className="text-large products__special__text">Ocasiones <br/> Especiales</h4>
                         <div className="products__special__img-container">
                             <img className="products__special__img" src={ chocolateSpecial } alt="box of chocolates for halloween with the form of a witch heel"/>

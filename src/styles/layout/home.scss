@@ -101,15 +101,28 @@
         }
         &__empaques {
             display: flex;
-            justify-content: flex-end;
             align-items: center;
+            justify-content: space-between;
             background-color: $c-custom-2;
             padding: 100px 0;
             height: 100vh;
             position: relative;
             z-index: 13;
             &__img {
-                max-width: 950px;
+                max-width: 850px;
+                right: 70px;
+            }
+            &__text {
+                margin-left: 70px;
+                z-index: 1;
+            }
+            .background-o {
+                position: absolute;
+                top: 150px;
+                left: 90px;
+                &__path {
+                    fill: $c-custom-2--background;
+                }
             }
         }
         &__barras {
@@ -137,11 +150,14 @@
             &__text {
                 margin-right: 70px;
             }
-            &__o {
+            .background-o {
                 position: absolute;
                 bottom: 50px;
                 right: 150px;
                 z-index: -1;
+                &__path {
+                    fill: $c-custom-4--background;
+                }
             }
         }
         &__special {
@@ -172,10 +188,14 @@
                 margin-left: 70px;
                 color: $c-background;
             }
-            &__o {
+            .background-o {
                 position: absolute;
                 top: 50px;
                 left: 10px;
+                z-index: -1;
+                &__path {
+                    fill: $c-custom-3--background;
+                }
             }
         }
     }

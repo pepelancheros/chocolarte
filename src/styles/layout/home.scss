@@ -28,7 +28,7 @@
     .chocolate-melt {
         position: relative;
         z-index: 10;
-        background-color: $c-custom-2;
+        background-color: $c-custom-1;
         &__background {
             width: 100%;
             margin-top: -50px;
@@ -56,7 +56,7 @@
         }
         &__info {
             position: absolute;
-            background-color: $c-custom-1;
+            background-color: rgba($c-custom-1, 0.7);
             padding: 100px 20px 100px 80px;
             border-top-right-radius: 30px;
             border-bottom-right-radius: 30px;
@@ -80,7 +80,7 @@
         }
         &__chocolates{
             position: relative;
-            background-color: $c-custom-4;
+            background-color: $c-custom-3;
             position: relative;
             z-index: 11;
             &__text {
@@ -103,7 +103,7 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            background-color: $c-custom-2;
+            background-color: $c-custom-1;
             padding: 100px 0;
             height: 100vh;
             position: relative;
@@ -121,7 +121,7 @@
                 top: 150px;
                 left: 90px;
                 &__path {
-                    fill: $c-custom-2--background;
+                    fill: $c-custom-1--background;
                 }
             }
         }
@@ -129,7 +129,7 @@
             display: flex;
             align-items: center;
             justify-content: flex-end;
-            background-color: $c-custom-5;
+            background-color: $c-custom-4;
             padding: 20px 0;
             height: 100vh;
             position: relative;
@@ -156,7 +156,7 @@
                 right: 150px;
                 z-index: -1;
                 &__path {
-                    fill: $c-custom-4--background;
+                    fill: $c-custom-3--background;
                 }
             }
         }
@@ -164,7 +164,7 @@
             display: flex;
             justify-content: flex-start;
             align-items: center;
-            background-color: $c-custom-3;
+            background-color: $c-custom-2;
             padding: 50px 0;
             height: 100vh;
             position: relative;
@@ -194,7 +194,7 @@
                 left: 10px;
                 z-index: -1;
                 &__path {
-                    fill: $c-custom-3--background;
+                    fill: $c-custom-2--background;
                 }
             }
         }
@@ -262,7 +262,7 @@
         .chocolate-customization {
             margin-bottom: 8%;
             &__info {
-                background-color: $c-custom-1;
+                background-color: rgba($c-custom-1, 0.7);
                 padding-bottom: 50px;
                 border-bottom-right-radius: 0;
                 top: 0;

@@ -203,7 +203,7 @@ function Home() {
                     <address className="home__contact__text text-large">
                         Patricia Olarte<br/>
                         <a href="tel:+573012208727">3012208727</a><br/>
-                        <a href="#">@chocolarte</a>
+                        <a href="/home">@chocolarte</a>
                     </address>
                     <img className="home__contact__background" src={ contactBackground } alt=""/>
                 </div>

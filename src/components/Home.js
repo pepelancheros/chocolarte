@@ -33,18 +33,6 @@ function Home() {
         }
     });
 
-    gsap.to(".products__barras__text", {
-        scrollTrigger: { 
-            trigger: ".products__barras__text",
-            pin: true,
-            pinSpacing: false,
-            start: "top 70px",
-            end: "+=350",
-            scrub: true,
-            toggleActions: "restart none none none",
-        },
-    });
-
     gsap.to(".products__special__text", {
         scrollTrigger: { 
             trigger: ".products__special__text",
@@ -102,6 +90,18 @@ function Home() {
                         pinSpacing: false,
                         start: "center 30%",
                         end: "+=700",
+                        scrub: true,
+                        toggleActions: "restart none none none",
+                    },
+                });
+
+                gsap.to(".products__barras__text", {
+                    scrollTrigger: { 
+                        trigger: ".products__barras__text",
+                        pin: true,
+                        pinSpacing: false,
+                        start: "top 70px",
+                        end: "+=350",
                         scrub: true,
                         toggleActions: "restart none none none",
                     },

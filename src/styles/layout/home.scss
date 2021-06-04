@@ -300,8 +300,20 @@
                 }
             }
             &__barras {
+                height: 60vh;
                 &__img {
                     width: 100%;
+                }
+                &__text {
+                    z-index: 1;
+                    background: rgba($c-custom-3--background, 0.75);
+                    padding: 5px 10px;
+                    margin-right: 50px;
+                    border-radius: 5px;
+                }
+                .background-o {
+                    bottom: unset;
+                    top: 70px;
                 }
             }
             &__special {

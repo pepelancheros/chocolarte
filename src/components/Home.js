@@ -32,30 +32,6 @@ function Home() {
             pinSpacing: false
         }
     });
-     
-    gsap.to(".products__empaques__text", {
-        scrollTrigger: { 
-            trigger: ".products__empaques__text",
-            pin: true,
-            pinSpacing: false,
-            start: "top 200px",
-            end: "+=300",
-            scrub: true,
-            toggleActions: "restart none none none",
-        },
-    });
-
-    gsap.to(".products__empaques__img", {
-        scrollTrigger: { 
-            trigger: ".products__empaques__img",
-            pin: true,
-            pinSpacing: false,
-            start: "center 30%",
-            end: "+=700",
-            scrub: true,
-            toggleActions: "restart none none none",
-        },
-    });
 
     gsap.to(".products__barras__text", {
         scrollTrigger: { 
@@ -105,6 +81,30 @@ function Home() {
                     },
                     top: "2px",
                     maxWidth: "200px",
+                });
+
+                gsap.to(".products__empaques__text", {
+                    scrollTrigger: { 
+                        trigger: ".products__empaques__text",
+                        pin: true,
+                        pinSpacing: false,
+                        start: "top 200px",
+                        end: "+=300",
+                        scrub: true,
+                        toggleActions: "restart none none none",
+                    },
+                });
+                
+                gsap.to(".products__empaques__img", {
+                    scrollTrigger: { 
+                        trigger: ".products__empaques__img",
+                        pin: true,
+                        pinSpacing: false,
+                        start: "center 30%",
+                        end: "+=700",
+                        scrub: true,
+                        toggleActions: "restart none none none",
+                    },
                 });
             }
         })

@@ -280,15 +280,23 @@
                 }
             }
             &__empaques {
+                height: 60vh;
                 &__text {
-                    position: absolute;
+                    position: relative;
+                    top: 120px;
+                    margin: 0 auto;
                 }
                 &__img {
+                    position: absolute;
                     width: 100%;
+                    max-width: 500px;
+                    right: 50%;
+                    transform: translate(50%, -5%);
                 }
                 .background-o {
                     left: unset;
                     right: 0;
+                    top: 40px;
                 }
             }
             &__barras {

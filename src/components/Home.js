@@ -12,6 +12,7 @@ import chocolateSpecial from '../imgs/witchheel.png'
 import contactBackground from '../imgs/contact-background.JPG'
 import OBackground from './OBackground.js'
 import ChocolarteTitle from './ChocolarteTitle.js'
+import whatsAppSvg from '../imgs/whatsapp_logo.svg'
 import _ from 'lodash';
 import gsap from 'gsap'
 import scrollTrigger from 'gsap/ScrollTrigger'
@@ -202,7 +203,7 @@ function Home() {
                 <div className="home__contact">
                     <address className="home__contact__text text-large">
                         Patricia Olarte<br/>
-                        <a href="tel:+573012208727">3012208727</a><br/>
+                        <a href="https://wa.me/573012208727/?text=Hola%20Patricia%2C%20me%20gustar%C3%ADa%20hacer%20un%20pedido%20de%20chocolates"><img src={ whatsAppSvg } alt="whatsapp logo"/> 3012208727</a><br/>
                         <a href="/home">@chocolarte</a>
                     </address>
                     <img className="home__contact__background" src={ contactBackground } alt=""/>

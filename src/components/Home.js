@@ -136,10 +136,10 @@ function Home() {
                 <div className="chocolarte-title">
                     <ChocolarteTitle/>
                 </div>
-                <img className="banner" src={ imgBannerXl } srcSet={`${imgBannerSm} 400w, ${imgBannerMd} 800w, ${imgBannerXl} 1200w`} sizes="100vw" alt="chocolate ingredients"/>
-                <img className="banner--fade" src={ imgBannerFade } alt="decoration"/>
+                <img className="banner" src={ imgBannerXl } srcSet={`${imgBannerSm} 400w, ${imgBannerMd} 800w, ${imgBannerXl} 1200w`} sizes="100vw" alt="chocolate ingredients including strawberries, coffee and oatmeal"/>
+                <img className="banner--fade" src={ imgBannerFade } alt=""/>
                 <div ref={myRef} className="chocolate-melt">
-                    <svg className="chocolate-melt__background" viewBox="0 0 1440 1493" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+                    <svg className="chocolate-melt__background" alt="" viewBox="0 0 1440 1493" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
                         <path id="melting-chocolate" d="M0 -0.000244141H1440V161C1440 161 1381.5 416 1381.5 161C1381.5 29.0662 1235.5 161 1188 161C1140.5 161 1111 161 1068 161C1025 161 999.5 170.093 984 161C968.5 151.906 948 161 910 161C872 161 856 150.5 841 161C826 171.5 806.205 161 776 161C745.795 161 744 169.963 733 161C722 152.037 698.5 167 686 161C673.5 155 650 161 636.5 161C582.5 161 607.5 161 560 161C512.5 161 551 71.488 444 161C337 250.511 336 179 242 161C148 143 102 150 0 161V-0.000244141Z" fill="url(#paint0_linear)">
                             <animate ref={myAnimation} begin="indefinite" dur="3.5s" attributeName="d" fill="freeze" to="M0 0H1440V1492.5C1440 1492.5 1380.5 1490.5 1380.5 1235.5C1380.5 1103.57 1316.03 1046.5 1268.53 1046.5C1221.03 1046.5 1182.03 1092 1139.03 1092C1096.03 1092 1069.53 1064.59 1054.03 1055.5C1038.53 1046.41 1004.03 1018 966.031 1018C928.031 1018 898.031 1037 883.031 1047.5C868.031 1058 852.236 1069 822.031 1069C791.826 1069 777.531 1056.46 766.531 1047.5C755.531 1038.54 744.531 1030 732.031 1024C719.531 1018 706.032 1016 692.531 1016C638.531 1016 669.031 1127 621.531 1127C574.031 1127 615.031 963.988 508.031 1053.5C401.031 1143.01 378.032 1043 284.031 1025C190.031 1007 102 1168 0 1179V0Z"></animate>
                         </path>
@@ -165,7 +165,7 @@ function Home() {
                     </div>
                 </div>
                 <div className="chocolate-customization">
-                    <img className="chocolate-customization__image" src={ chocolateInfo } alt=""/>
+                    <img className="chocolate-customization__image" src={ chocolateInfo } alt="arrange of chocolates with some ingredients and placed visually atractive"/>
                     <div className="col-12 col-md-8 col-lg-6 chocolate-customization__info text-medium">
                         <p className="chocolate-customization__info__text">Personaliza tus chocolates con el porcentaje de cacao, relleno y decoración que más te guste </p>
                     </div>
@@ -178,12 +178,12 @@ function Home() {
                     </div>
                     <div className="products__chocolates">
                         <h4 className="text-large products__chocolates__text">Chocolates</h4>
-                        <img className="products__chocolates__main" src={ chocolatesForestMain } alt="multiple chocolates"/>
+                        <img className="products__chocolates__main" src={ chocolatesForestMain } alt="multiple chocolates visually atractive"/>
                     </div>
                     <div className="products__empaques">
                         <OBackground/>
                         <h4 className="text-large products__empaques__text">Empaques</h4>
-                        <img className="products__empaques__img" src={ blackBoxGif } alt="gif chocolate box opening"/>
+                        <img className="products__empaques__img" src={ blackBoxGif } alt="gif of a box of chocolates opening and showing the chocolates inside"/>
                     </div>
                     <div className="products__barras"> 
                         <div className="products__barras__img-container">
@@ -203,7 +203,7 @@ function Home() {
                 <div className="home__contact">
                     <address className="home__contact__text text-large">
                         Patricia Olarte<br/>
-                        <a href="https://wa.me/573012208727/?text=Hola%20Patricia%2C%20me%20gustar%C3%ADa%20hacer%20un%20pedido%20de%20chocolates"><img src={ whatsAppSvg } alt="whatsapp logo"/> 3012208727</a><br/>
+                        <a href="https://wa.me/573012208727/?text=Hola%20Patricia%2C%20me%20gustar%C3%ADa%20hacer%20un%20pedido%20de%20chocolates"><img className="home__contact__whatsapp-logo" src={ whatsAppSvg } alt="whatsapp logo"/> 3012208727</a><br/>
                         <a href="/home">@chocolarte</a>
                     </address>
                     <img className="home__contact__background" src={ contactBackground } alt=""/>
